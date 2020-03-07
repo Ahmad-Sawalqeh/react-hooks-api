@@ -8,7 +8,7 @@
 
 - [submission PR](https://github.com/Ahmad-Sawalqeh/react-hooks-api/pull/1)
 - [Deploy React App](https://ahmad-sawalqeh.github.io/react-hooks-api/)
-- [Javascript Tests]()
+- [Javascript Tests](https://github.com/Ahmad-Sawalqeh/react-hooks-api/runs/492482531?check_suite_focus=true)
 
 ### Setup
 How to initialize/run your application (where applicable)
