@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://ahmad-sawalqeh.github.io/react-hooks-api/",
+  "homepage": "https://ahmad-sawalqeh.github.io/react-hooks-api/react-hooks/",
   "eslintConfig": {
     "extends": "react-app"
   },
