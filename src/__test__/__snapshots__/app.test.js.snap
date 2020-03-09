@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToDoList /> Assert DOM stability via snapshot 1`] = `
+Array [
+  <header>
+    <h1>
+      <span>
+        There are 
+      </span>
+      0
+      <span>
+         Items To Complete
+      </span>
+    </h1>
+  </header>,
+  <section
+    className="todo"
+  >
+    <fieldset>
+      <div>
+        <h3>
+          Add Item
+        </h3>
+        <form
+          onSubmit={[Function]}
+        >
+          <label>
+            <span>
+              To Do Item  
+            </span>
+            <input
+              name="text"
+              onChange={[Function]}
+              placeholder="Add To Do List Item"
+            />
+          </label>
+          <label>
+            Difficulty:
+            <select
+              name="difficulty"
+              onChange={[Function]}
+            >
+              <option
+                value="1"
+              >
+                1
+              </option>
+              <option
+                value="2"
+              >
+                2
+              </option>
+              <option
+                value="3"
+              >
+                3
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+              <option
+                value="5"
+              >
+                5
+              </option>
+            </select>
+          </label>
+          <label>
+            <span>
+              Assigned To  
+            </span>
+            <input
+              name="assignee"
+              onChange={[Function]}
+              placeholder="Assigned To"
+              type="text"
+            />
+          </label>
+          <label>
+            <span>
+              Due  
+            </span>
+            <input
+              name="due"
+              onChange={[Function]}
+              type="date"
+            />
+          </label>
+          <button
+            c={true}
+            className="add"
+          >
+            Add Item
+          </button>
+        </form>
+      </div>
+    </fieldset>
+    <div>
+      <ul />
+    </div>
+  </section>,
+]
+`;
