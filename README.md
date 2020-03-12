@@ -1,12 +1,12 @@
 # Custom-Hooks
 
-# LAB - Class 31
+# LAB - Class 32
 
 ### Author: Ahmad Sawalqeh
 
 ### Links and Resources
 
-- [submission PR](https://github.com/Ahmad-Sawalqeh/react-hooks-api/pull/1)
+- [submission PR](https://github.com/Ahmad-Sawalqeh/react-hooks-api/pull/2)
 - [Deploy React App](https://ahmad-sawalqeh.github.io/react-hooks-api/)
 - [Javascript Tests](https://github.com/Ahmad-Sawalqeh/react-hooks-api/runs/492482531?check_suite_focus=true)
 
@@ -18,7 +18,6 @@ How to initialize/run your application (where applicable)
 
 - How do you run tests?
 `npm test`
-- Describe any tests that you did not complete, skipped, etc
 
 # UML
 
