@@ -19,3 +19,4 @@ jobs:
         git remote set-url origin https://${{ secrets.PERSONAL_TOKEN }}@github.com/${{ github.repository }}.git
         npm install
         npm run deploy
+
