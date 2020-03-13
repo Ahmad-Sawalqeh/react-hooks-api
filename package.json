@@ -20,11 +20,15 @@
     "react-test-renderer": "^16.13.0"
   },
   "scripts": {
+    "lint": "eslint '**/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://ahmad-sawalqeh.github.io/react-hooks-api/",
   "eslintConfig": {
     "extends": "react-app"
   },

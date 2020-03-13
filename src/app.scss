@@ -1,12 +1,13 @@
 *{
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .container{
-  // position: relative;
+  margin: 0 auto;
   width: 700px;
-  height: auto;
   background: #eee;
+  height: auto;
+  // height: 100vh;
 }
