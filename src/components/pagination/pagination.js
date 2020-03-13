@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import './pagination.scss';
 
 const Pagination = ({ postsPerPage, totalPosts, paginate ,curent,}) => {
   const pageNumbers = [];
@@ -21,14 +22,12 @@ const Pagination = ({ postsPerPage, totalPosts, paginate ,curent,}) => {
       <ul className='pagination'>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='!#' className='page-link'>
-              {number}
-            </a>
+            <a onClick={() => paginate(number)} href='!#' className='page-link'>{number}</a>
           </li>
         ))}
       </ul>
-      <button onClick={prev}>previus</button>
-      <button onClick={next}>next</button>
+      <button onClick={prev} >Previous</button>
+      <button onClick={next} className="right">Next</button>
     </nav>
   );
 };

@@ -5,7 +5,7 @@ import Modal from '../modal/modal.js';
 import Header from '../header/header.js';
 
 import Pagination from '../pagination/pagination.js';
-import { SettingProvider } from '../context/context.js';
+import { SettingsContext } from '../context/context.js';
 
 // import useFetch from '../hooks/useFetch.js';
 import useForm from '../hooks/useForm.js';
@@ -16,7 +16,7 @@ const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
 
 function ToDoList (props) {
 
-  const context = useContext(SettingProvider);
+  const context = useContext(SettingsContext);
 
   const [ todoList, setTodoList ] = useState([]);
 
@@ -144,7 +144,7 @@ function ToDoList (props) {
                 <span>Due  </span>
                 <input type="date" name="due" onChange={handleInputChange} />
               </label>
-              <button className='add'c>Add Item</button>
+              <button className='add'>Add Item</button>
             </form>
           </div>
         </fieldset>
@@ -168,8 +168,8 @@ function ToDoList (props) {
               </li>
             ))}
           </ul>
-          <button onClick={hide}>Hide completed</button>
-          <button onClick={show}>Show completed</button>
+          {/* <button onClick={hide}>Hide completed</button>
+          <button onClick={show}>Show completed</button> */}
           <Pagination
             postsPerPage={context.postsPerPage}
             totalPosts={todoList.length}
