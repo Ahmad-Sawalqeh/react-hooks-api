@@ -102,98 +102,102 @@ function ToDoList (props) {
     context.changeDisplay(true);
   };
 
-  return (
-    <>
-      <Header todoList={todoList}/>
+  // if(this.context.loggedIn){
+    return (
+      <>
+        <Header todoList={todoList}/>
 
-      <section className="todo">
-        <fieldset>
-          <div>
-            <h3>Add Item</h3>
-            <form onSubmit={addItem}>
-              <label>
-                <span>To Do Item</span>
-                <input
-                  name="text"
-                  placeholder="Add To Do List Item"
-                  required
-                  onChange={handleInputChange}
-                />
-              </label>
-              {/* <label>
-                <span>Difficulty Rating  </span>
-                <input type="range" min="1" max="5" name="difficulty" defaultValue="3" onChange={handleInputChange} />
-              </label> */}
+        <section className="todo">
+          <fieldset>
+            <div>
+              <h3>Add Item</h3>
+              <form onSubmit={addItem}>
+                <label>
+                  <span>To Do Item</span>
+                  <input
+                    name="text"
+                    placeholder="Add To Do List Item"
+                    required
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {/* <label>
+                  <span>Difficulty Rating  </span>
+                  <input type="range" min="1" max="5" name="difficulty" defaultValue="3" onChange={handleInputChange} />
+                </label> */}
 
-              <label>Difficulty:
-                <select name= "difficulty" onChange={handleInputChange}>
-                  <option value ="1">1</option>
-                  <option value ="2">2</option>
-                  <option value ="3">3</option>
-                  <option value ="4">4</option>
-                  <option value ="5">5</option>
-                </select>
-              </label>
+                <label>Difficulty:
+                  <select name= "difficulty" onChange={handleInputChange}>
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                  </select>
+                </label>
 
-              <label>
-                <span>Assigned To  </span>
-                <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} />
-              </label>
+                <label>
+                  <span>Assigned To  </span>
+                  <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} />
+                </label>
 
-              <label>
-                <span>Due  </span>
-                <input type="date" name="due" onChange={handleInputChange} />
-              </label>
-              <button className='add'>Add Item</button>
-            </form>
-          </div>
-        </fieldset>
-
-        <div>
-          <ul>
-            { currentPosts.map(item => (
-              <li
-                className={`complete-${item.complete.toString()} - ${context.display}`}
-                key={item._id}
-              >
-                <span onClick={() => toggleComplete(item._id)}>
-                  {item.text}
-                </span>
-                <button onClick={() => toggleDetails(item._id)}>
-                  Details
-                </button>
-                <button onClick={() => deleteItem(item._id)}>
-                  Delete
-                </button>
-              </li>
-            ))}
-          </ul>
-          {/* <button onClick={hide}>Hide completed</button>
-          <button onClick={show}>Show completed</button> */}
-          <Pagination
-            postsPerPage={context.postsPerPage}
-            totalPosts={todoList.length}
-            paginate={paginate}
-            curent={context.currentPage}
-          />
-        </div>
-      </section>
-
-      <When condition={showDetails}>
-        <Modal title="To Do Item" close={toggleDetails}>
-          <div className="todo-details">
-            <header>
-              <span>Assigned To: {details.assignee}</span>
-              <span className='due'>Due: {details.due}</span>
-            </header>
-            <div className="item">
-              {details.text}
+                <label>
+                  <span>Due  </span>
+                  <input type="date" name="due" onChange={handleInputChange} />
+                </label>
+                <button className='add'>Add Item</button>
+              </form>
             </div>
+          </fieldset>
+
+          <div>
+            <ul>
+              { currentPosts.map(item => (
+                <li
+                  className={`complete-${item.complete.toString()} - ${context.display}`}
+                  key={item._id}
+                >
+                  <span onClick={() => toggleComplete(item._id)}>
+                    {item.text}
+                  </span>
+                  <button onClick={() => toggleDetails(item._id)}>
+                    Details
+                  </button>
+                  <button onClick={() => deleteItem(item._id)}>
+                    Delete
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {/* <button onClick={hide}>Hide completed</button>
+            <button onClick={show}>Show completed</button> */}
+            <Pagination
+              postsPerPage={context.postsPerPage}
+              totalPosts={todoList.length}
+              paginate={paginate}
+              curent={context.currentPage}
+            />
           </div>
-        </Modal>
-      </When>
-    </>
-  );
+        </section>
+
+        <When condition={showDetails}>
+          <Modal title="To Do Item" close={toggleDetails}>
+            <div className="todo-details">
+              <header>
+                <span>Assigned To: {details.assignee}</span>
+                <span className='due'>Due: {details.due}</span>
+              </header>
+              <div className="item">
+                {details.text}
+              </div>
+            </div>
+          </Modal>
+        </When>
+      </>
+    );
+  // }else{
+  //   return null;
+  // }
 }
 
 export default ToDoList;
