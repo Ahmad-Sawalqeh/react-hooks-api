@@ -1,0 +1,43 @@
+.pagination {
+  list-style-type:none;
+  display: flex;
+
+  .page-item {
+      margin: .75em .75em;
+
+      .page-link{
+        text-decoration: none;
+        padding: .25em .25em;
+        color: #fff;
+        background-color: #204160;
+        border: 1px solid #000;
+      }
+
+  }
+}
+
+nav{
+
+
+  button{
+    margin: 1em 1em;
+    padding: 1em;
+    border: none;
+    color: #f5f5f5;
+    background-color: #204160;
+    transition: .5s;
+    border-radius: 5px;
+
+    &:hover{
+      cursor: pointer;
+      background-color: #ccc;
+      color: #000;
+    }
+
+  }
+
+  .right{
+    float: right;
+  }
+
+}
